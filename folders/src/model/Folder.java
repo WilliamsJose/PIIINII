@@ -23,6 +23,21 @@ public class Folder implements CommonEl {
 		folderSize += file.getSize();
 	}
 	
+	public void remove(Folder folder) {
+		folderSize -= folder.getSize();
+		container.remove(folder);
+	}
+	
+	public void remove(File file) {
+		folderSize -= file.getSize();
+		container.remove(file);
+	}
+	
+	public void clear() {
+		folderSize = 0;
+		container.clear();
+	}
+	
 	public String getName() {
 		return folderName;
 	}

@@ -27,12 +27,19 @@ public class Test {
 		
 		Folder folder3 = new Folder("Third Folder");
 		folder1.add(folder3);
+		
+		//remove old folder1
+		folder2.remove(folder1);
+		
 		folder2.add(folder1);
 		
 		System.out.println(folder2.toString());
-		// Inside folder3 there is nothing
-		// Inside folder1 there are file1, file2 and folder3
-		// Inside folder2 there are old folder1, new folder1 with folder3, file3 and file4
+		
+		System.out.println("\n----------------------------\n");
+		
+		folder2.clear();
+		System.out.println(folder2.toString());
+		
 	}
 
 }
